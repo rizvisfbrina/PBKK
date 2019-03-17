@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- Don't forget to add: 1) Prefix, 2) schema location -->
+	<context:property-placeholder
+		location="classpath:movie.properties"/>
+
+    <bean id="myFortuneService" class="com.rizvi.movieapp.HappyFortuneService"></bean> 
+    
+    <bean id="myMovie" class="com.rizvi.movieapp.UpcomingMovie">
+		
+		<!-- Dependency Injection -->
+ 		<constructor-arg ref="myFortuneService"></constructor-arg>
+ 		
+		<property name="title" value="${test.title}"></property>
+		<property name="date" value="${test.date}"></property>
+				
+		<!-- Setter Injection -->
+		<property name="fortuneService" ref="myFortuneService"></property>
+		
+    </bean>
+    <bean id="myMoviePrototype" class="com.rizvi.movieapp.UpcomingMovie" scope="prototype">
+    	<property name="title" value="Avenger : End Game(2019)"></property>
+		<property name="date" value="26 April 2019"></property>
+    </bean>
+	
+</beans>
