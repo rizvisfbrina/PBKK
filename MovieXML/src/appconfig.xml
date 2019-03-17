@@ -11,18 +11,18 @@
 	<context:property-placeholder
 		location="classpath:movie.properties"/>
 
-    <bean id="myFortuneService" class="com.rizvi.movieapp.HappyFortuneService"></bean> 
+    <bean id="myTheaterService" class="com.rizvi.movieapp.NumberTheaterService"></bean> 
     
     <bean id="myMovie" class="com.rizvi.movieapp.UpcomingMovie">
 		
 		<!-- Dependency Injection -->
- 		<constructor-arg ref="myFortuneService"></constructor-arg>
+ 		<constructor-arg ref="myTheaterService"></constructor-arg>
  		
 		<property name="title" value="${test.title}"></property>
 		<property name="date" value="${test.date}"></property>
 				
 		<!-- Setter Injection -->
-		<property name="fortuneService" ref="myFortuneService"></property>
+		<property name="theaterService" ref="myTheaterService"></property>
 		
     </bean>
     <bean id="myMoviePrototype" class="com.rizvi.movieapp.UpcomingMovie" scope="prototype">

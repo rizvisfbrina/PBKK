@@ -3,11 +3,11 @@ package com.rizvi.javaclassconfig;
 import org.springframework.stereotype.Component;
 
 @Component
-public class DataBaseFortuneService implements FortuneService {
+public class DataBaseTheaterService implements TheaterService {
 	
 	@Override
-	public String getFortune() {
-		return "Database";
+	public String getTheater() {
+		return "Theater 3";
 	}
 
 }

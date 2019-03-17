@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 
 public class UpcomingMovie implements Movie {
 
-	private FortuneService fortuneService;
+	private TheaterService theaterService;
 	
 	@Value("${foo.title}")
 	private String title;
@@ -16,19 +16,19 @@ public class UpcomingMovie implements Movie {
 		
 	}
 	
-	public UpcomingMovie(FortuneService fortuneService) {
-		this.fortuneService = fortuneService;
+	public UpcomingMovie(TheaterService theaterService) {
+		this.theaterService = theaterService;
 	}
 
 
-	public FortuneService getFortuneService() {
-		return fortuneService;
+	public TheaterService getTheaterService() {
+		return theaterService;
 	}
 
 
 
-	public void setFortuneService(FortuneService fortuneService) {
-		this.fortuneService = fortuneService;
+	public void setTheaterService(TheaterService theaterService) {
+		this.theaterService = theaterService;
 	}
 
 
@@ -36,7 +36,7 @@ public class UpcomingMovie implements Movie {
 	@Override
 	public String getDailyMovie() {
 		// TODO Auto-generated method stub
-		return "Now Playing : 5 Movies";
+		return "Now Playing : 3 Movies";
 	}
 
 	public String getTitle() {

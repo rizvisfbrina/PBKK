@@ -3,10 +3,10 @@ package com.rizvi.app;
 import org.springframework.stereotype.Component;
 
 @Component
-public class RandomFortuneService implements FortuneService {
+public class RandomTheaterService implements TheaterService {
 	
 	@Override
-	public String getFortune() {
+	public String getTheater() {
 		return null;
 	}
 

@@ -2,7 +2,7 @@ package com.rizvi.movieapp;
 
 public class UpcomingMovie implements Movie {
 
-	private FortuneService fortuneService;
+	private TheaterService theaterService;
 	String title;
 	String date;
 	
@@ -16,17 +16,17 @@ public class UpcomingMovie implements Movie {
 		
 	}
 
-	public UpcomingMovie(FortuneService fortuneService) {
+	public UpcomingMovie(TheaterService theaterService) {
 		super();
-		this.fortuneService = fortuneService;
+		this.theaterService = theaterService;
 	}
 
-	public FortuneService getFortuneService() {
-		return fortuneService;
+	public TheaterService getTheaterService() {
+		return theaterService;
 	}
 
-	public void setFortuneService(FortuneService fortuneService) {
-		this.fortuneService = fortuneService;
+	public void setTheaterService(TheaterService theaterService) {
+		this.theaterService = theaterService;
 	}
 
 	public String getTitle() {

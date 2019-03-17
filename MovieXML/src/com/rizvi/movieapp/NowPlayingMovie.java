@@ -2,22 +2,22 @@
 
 public class NowPlayingMovie implements Movie {
 
-	private FortuneService fortuneService;
+	private TheaterService theaterService;
 	
 	public NowPlayingMovie() {
 		
 	}
 
-	public NowPlayingMovie(FortuneService fortuneService) {
-		this.fortuneService = fortuneService;
+	public NowPlayingMovie(TheaterService theaterService) {
+		this.theaterService = theaterService;
 	}
 
-	public FortuneService getFortuneService() {
-		return fortuneService;
+	public TheaterService getTheaterService() {
+		return theaterService;
 	}
 
-	public void setFortuneService(FortuneService fortuneService) {
-		this.fortuneService = fortuneService;
+	public void setTheaterService(TheaterService theaterService) {
+		this.theaterService = theaterService;
 	}
 
 	@Override

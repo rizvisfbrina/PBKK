@@ -12,8 +12,8 @@ public class NowPlayingMovie implements Movie {
 	
 	//dependency injection using field directly
 	@Autowired
-	@Qualifier ("dataBaseFortuneService")
-	private FortuneService fortuneService;
+	@Qualifier ("dataBaseTheaterService")
+	private TheaterService theaterService;
 	
 	public NowPlayingMovie() {
 		
@@ -22,18 +22,18 @@ public class NowPlayingMovie implements Movie {
 	
 	//dependency injection using constructor
 	//@Autowired
-	public NowPlayingMovie(FortuneService fortuneService) {
-		this.fortuneService = fortuneService;
+	public NowPlayingMovie(TheaterService theaterService) {
+		this.theaterService = theaterService;
 	}
 	
-	public FortuneService getFortuneService() {
-		return fortuneService;
+	public TheaterService getTheaterService() {
+		return theaterService;
 	}
 	
 	//dependency injection using setter / mutator
 	//@Autowired
-	public void setFortuneService(FortuneService fortuneService) {
-		this.fortuneService = fortuneService;
+	public void setTheaterService(TheaterService theaterService) {
+		this.theaterService = theaterService;
 	}
 
 	@Override

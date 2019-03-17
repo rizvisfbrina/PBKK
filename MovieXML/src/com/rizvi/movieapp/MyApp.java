@@ -13,7 +13,7 @@ public class MyApp {
 		movie.getDailyMovie();
 		
 		UpcomingMovie upcomingMovie = (UpcomingMovie) movie;
-		System.out.println(upcomingMovie.getFortuneService().getFortune());
+		System.out.println(upcomingMovie.getTheaterService().getTheater());
 		System.out.println(upcomingMovie.getTitle() + ", " + upcomingMovie.getDate());
 		
 		//Bean scope : Singleton

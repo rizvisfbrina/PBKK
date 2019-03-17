@@ -19,13 +19,13 @@ public class MovieConfig {
 	}
 	
 	@Bean
-	public FortuneService happyFortuneService() {
-		return new HappyFortuneService();
+	public TheaterService numberTheaterService() {
+		return new NumberTheaterService();
 	}
 	
 	@Bean
-	public Movie upcomingMovie(FortuneService fortuneService) {
-		UpcomingMovie upcomingMovie2 = new UpcomingMovie(happyFortuneService());
+	public Movie upcomingMovie(TheaterService theaterService) {
+		UpcomingMovie upcomingMovie2 = new UpcomingMovie(numberTheaterService());
 		return upcomingMovie2;
 	}
 

@@ -12,7 +12,6 @@ public class MyApp {
 		
 		System.out.println(upcoming.getDailyMovie());
 		System.out.println(upcoming.getTitle());
-		
 		context.close();
 
 	}

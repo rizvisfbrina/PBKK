@@ -1,8 +1,8 @@
 package com.rizvi.javaclassconfig;
 
-public class RESTFortuneService {
+public class RESTTheaterService {
 
-	public RESTFortuneService() {
+	public RESTTheaterService() {
 		// TODO Auto-generated constructor stub
 	}
 

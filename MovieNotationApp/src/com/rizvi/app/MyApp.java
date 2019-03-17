@@ -13,7 +13,7 @@ public class MyApp {
 		NowPlayingMovie happy = context.getBean("nowPlayingMovie", NowPlayingMovie.class);
 		
 		System.out.println(movie.getDailyMovie());
-		System.out.println(happy.getFortuneService().getFortune());
+		System.out.println(happy.getTheaterService().getTheater());
 		
 		
 		context.close();
